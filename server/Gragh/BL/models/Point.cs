@@ -125,11 +125,11 @@ namespace BL.models
 
             Equation nigzeret = new Equation();
             nigzeret.Parameters = new List<Parameter>();
-            Parameter p = new Parameter();
             int m = 0;
             //while (e.Parameters != null || e.Parameters[m].Class==0)
             foreach (var i in e.Parameters)
-            { 
+            {
+                Parameter p = new Parameter();
                 p.Value = i.Value * i.Class;
                 p.Operator = i.Operator;
                 p.Class = i.Class - 1;
